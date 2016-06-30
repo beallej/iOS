@@ -39,7 +39,6 @@ class PeopleServiceTests: QuickSpec {
                     ]]
 
                 return OHHTTPStubsResponse(JSONObject: obj, statusCode: 200, headers: nil).responseTime(OHHTTPStubsDownloadSpeed3G)
-                
             }
         }
 
@@ -60,8 +59,12 @@ class PeopleServiceTests: QuickSpec {
 
                 expect(completionCalled).toEventually(beTrue())
                 expect(actualPeople).toEventually(haveCount(2))
-                expect(actualPeople.first?.name).toNot(beNil())
-                expect(actualPeople.first?.age).to(beNil())
+
+                let firstPerson = actualPeople.first
+
+                expect(firstPerson?.id).toNot(beNil())
+                expect(firstPerson?.name).toNot(beNil())
+                expect(firstPerson?.phone).to(beNil())
             }
 
         }
@@ -70,7 +73,6 @@ class PeopleServiceTests: QuickSpec {
                 let peopleService = PeopleService()
                 var completionCalled = false
                 var actualPeople:[Person] = []
-
                 peopleService.getAllPeopleWithDetails { people in
                     completionCalled = true
                     actualPeople = people
@@ -83,7 +85,6 @@ class PeopleServiceTests: QuickSpec {
             }
 
         }
-        
 
     }
 }

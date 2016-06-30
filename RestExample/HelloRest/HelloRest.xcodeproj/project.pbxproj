@@ -18,6 +18,7 @@
 		680951131D24339000EF3F63 /* PeopleTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680951121D24339000EF3F63 /* PeopleTransformer.swift */; };
 		680951151D243C7100EF3F63 /* PeopleListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680951141D243C7100EF3F63 /* PeopleListViewModelTests.swift */; };
 		680951171D243E0700EF3F63 /* PeopleServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680951161D243E0700EF3F63 /* PeopleServiceMock.swift */; };
+		68F3F63B1D257519007CD3A4 /* PeopleTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F3F63A1D257519007CD3A4 /* PeopleTransformerTests.swift */; };
 		AD550FF41D1D5D33001B640B /* PeopleListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD550FF31D1D5D33001B640B /* PeopleListViewControllerTests.swift */; };
 		AD86366D1D1CA38000792EDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD86366C1D1CA38000792EDC /* AppDelegate.swift */; };
 		AD8636721D1CA38000792EDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8636701D1CA38000792EDC /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		680951121D24339000EF3F63 /* PeopleTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTransformer.swift; sourceTree = "<group>"; };
 		680951141D243C7100EF3F63 /* PeopleListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleListViewModelTests.swift; sourceTree = "<group>"; };
 		680951161D243E0700EF3F63 /* PeopleServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleServiceMock.swift; sourceTree = "<group>"; };
+		68F3F63A1D257519007CD3A4 /* PeopleTransformerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTransformerTests.swift; sourceTree = "<group>"; };
 		AAA49A9A49AFCAAE85CD5DFA /* Pods_HelloRest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloRest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD550FF31D1D5D33001B640B /* PeopleListViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleListViewControllerTests.swift; sourceTree = "<group>"; };
 		AD70B3D63BE2E643752101A6 /* Pods-HelloRestSpecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRestSpecs.release.xcconfig"; path = "../Pods/Target Support Files/Pods-HelloRestSpecs/Pods-HelloRestSpecs.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				680950F51D24216E00EF3F63 /* PeopleServiceTests.swift */,
+				68F3F63A1D257519007CD3A4 /* PeopleTransformerTests.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -210,7 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD72BAE81D1CA73B00C230B9 /* Build configuration list for PBXNativeTarget "HelloRestSpecs" */;
 			buildPhases = (
-				EAE3D014E57140C65E5C3643 /* 📦 Check Pods Manifest.lock */,
+				EAE3D014E57140C65E5C3643 /* [CP] Check Pods Manifest.lock */,
 				AAF4A4CFC64D12F3060EC27D /* [CP] Check Pods Manifest.lock */,
 				AD72BADB1D1CA73B00C230B9 /* Sources */,
 				AD72BADC1D1CA73B00C230B9 /* Frameworks */,
@@ -234,7 +237,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD86367B1D1CA38000792EDC /* Build configuration list for PBXNativeTarget "HelloRest" */;
 			buildPhases = (
-				68E8A2EC53524B779E21F046 /* 📦 Check Pods Manifest.lock */,
+				68E8A2EC53524B779E21F046 /* [CP] Check Pods Manifest.lock */,
 				054A7AC6CC5D8E9D0785E5C3 /* [CP] Check Pods Manifest.lock */,
 				AD8636651D1CA38000792EDC /* Sources */,
 				AD8636661D1CA38000792EDC /* Frameworks */,
@@ -343,14 +346,14 @@
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-HelloRest/Pods-HelloRest-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		68E8A2EC53524B779E21F046 /* 📦 Check Pods Manifest.lock */ = {
+		68E8A2EC53524B779E21F046 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,14 +451,14 @@
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-HelloRestSpecs/Pods-HelloRestSpecs-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EAE3D014E57140C65E5C3643 /* 📦 Check Pods Manifest.lock */ = {
+		EAE3D014E57140C65E5C3643 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68F3F63B1D257519007CD3A4 /* PeopleTransformerTests.swift in Sources */,
 				AD550FF41D1D5D33001B640B /* PeopleListViewControllerTests.swift in Sources */,
 				680951151D243C7100EF3F63 /* PeopleListViewModelTests.swift in Sources */,
 				680951111D24300200EF3F63 /* PersonTests.swift in Sources */,

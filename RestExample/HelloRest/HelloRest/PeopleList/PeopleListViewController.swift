@@ -21,7 +21,7 @@ class PeopleListViewController: UIViewController{
         isShowingDetails <~ viewModel.isShowingDetails
 
 
-        peopleSignal.producer.startWithNext { people in
+        peopleSignal.producer.startWithNext { _ in
             self.tableView.reloadData()
         }
     }
