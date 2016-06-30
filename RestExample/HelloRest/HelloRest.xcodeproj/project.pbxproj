@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2323668B274C31217913D69E /* Pods_HelloRestSpecs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F8DBBB6AF3E9EA04852AF0 /* Pods_HelloRestSpecs.framework */; };
+		58E7520D1D24C31400AA7822 /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E7520C1D24C31400AA7822 /* PersonDetailsViewController.swift */; };
+		58E7520F1D24C42300AA7822 /* PersonDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58E7520E1D24C42300AA7822 /* PersonDetails.storyboard */; };
 		680950F21D241DB600EF3F63 /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680950F11D241DB600EF3F63 /* PeopleService.swift */; };
 		680950F61D24216E00EF3F63 /* PeopleServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680950F51D24216E00EF3F63 /* PeopleServiceTests.swift */; };
 		6809510A1D24280700EF3F63 /* PeopleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680951071D24280700EF3F63 /* PeopleListViewController.swift */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		085341EFA08FAC5B81CB9B86 /* Pods-HelloRestSpecs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRestSpecs.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-HelloRestSpecs/Pods-HelloRestSpecs.debug.xcconfig"; sourceTree = "<group>"; };
 		49F8DBBB6AF3E9EA04852AF0 /* Pods_HelloRestSpecs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloRestSpecs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58E7520C1D24C31400AA7822 /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
+		58E7520E1D24C42300AA7822 /* PersonDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PersonDetails.storyboard; sourceTree = "<group>"; };
 		680950F11D241DB600EF3F63 /* PeopleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
 		680950F51D24216E00EF3F63 /* PeopleServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleServiceTests.swift; sourceTree = "<group>"; };
 		680951071D24280700EF3F63 /* PeopleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleListViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +97,15 @@
 				C6AA069526280F5372FDAE91 /* Pods-HelloRest.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		58E7520B1D24C30000AA7822 /* PersonDetails */ = {
+			isa = PBXGroup;
+			children = (
+				58E7520C1D24C31400AA7822 /* PersonDetailsViewController.swift */,
+				58E7520E1D24C42300AA7822 /* PersonDetails.storyboard */,
+			);
+			name = PersonDetails;
 			sourceTree = "<group>";
 		};
 		618CD38B9630F32BE9824CB5 /* Frameworks */ = {
@@ -191,6 +204,7 @@
 		AD86366B1D1CA38000792EDC /* HelloRest */ = {
 			isa = PBXGroup;
 			children = (
+				58E7520B1D24C30000AA7822 /* PersonDetails */,
 				680950FD1D24266D00EF3F63 /* PeopleList */,
 				680950FA1D24263000EF3F63 /* Models */,
 				680950F91D24262100EF3F63 /* Services */,
@@ -307,6 +321,7 @@
 				AD8636771D1CA38000792EDC /* LaunchScreen.storyboard in Resources */,
 				AD8636741D1CA38000792EDC /* Assets.xcassets in Resources */,
 				AD8636721D1CA38000792EDC /* Main.storyboard in Resources */,
+				58E7520F1D24C42300AA7822 /* PersonDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +533,7 @@
 				6809510B1D24280700EF3F63 /* PeopleListViewModel.swift in Sources */,
 				680950F21D241DB600EF3F63 /* PeopleService.swift in Sources */,
 				AD86366D1D1CA38000792EDC /* AppDelegate.swift in Sources */,
+				58E7520D1D24C31400AA7822 /* PersonDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

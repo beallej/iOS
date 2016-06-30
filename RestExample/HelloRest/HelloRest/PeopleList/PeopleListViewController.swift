@@ -21,9 +21,23 @@ class PeopleListViewController: UIViewController{
             self.tableView.reloadData()
         }
     }
+
+    func goToPersonDetailsView(withID id: Int) {
+        let targetStoryboard = UIStoryboard(name: "PersonDetails", bundle: nil)
+        let viewController = targetStoryboard.instantiateInitialViewController() as! PersonDetailsViewController
+        viewController.modalPresentationStyle = .OverCurrentContext
+        viewController.modalTransitionStyle =  .CrossDissolve
+        viewController.personID = id
+        pushViewControllerOntoNavigationController(withViewController: viewController, animated: true)
+    }
+
+    //allows the above logic to be tested by abstracting the untestable part
+    func pushViewControllerOntoNavigationController(withViewController viewController: UIViewController, animated: Bool) {
+        navigationController?.pushViewController(viewController, animated: animated)
+    }
 }
 
-extension PeopleListViewController : UITableViewDataSource {
+extension PeopleListViewController : UITableViewDataSource, UITableViewDelegate {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfPeople
@@ -36,6 +50,11 @@ extension PeopleListViewController : UITableViewDataSource {
 
         cell.textLabel?.text = personForIndex.name
         return cell
+    }
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let personID = viewModel.getPersonAtIndex(indexPath.row).id
+        goToPersonDetailsView(withID: personID)
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
