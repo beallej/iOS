@@ -10,14 +10,12 @@ class PeopleListViewController: UIViewController{
 
     var viewModel: PeopleListViewModel!
 
-    let peopleService = PeopleService()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Contacts"
         
-        viewModel = PeopleListViewModel(peopleService: peopleService)
-        peopleSignal <~ viewModel!.people.producer
+        viewModel = PeopleListViewModel(peopleService: PeopleService())
+        peopleSignal <~ viewModel.people.producer
 
         peopleSignal.producer.startWithNext { people in
             self.tableView.reloadData()
