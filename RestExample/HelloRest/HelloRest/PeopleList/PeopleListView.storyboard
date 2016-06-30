@@ -43,6 +43,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="showDetailsButton" destination="n0u-yn-XW7" id="iRV-oU-lLE"/>
                         <outlet property="tableView" destination="Ssc-Qf-lCZ" id="gSE-us-pEQ"/>
                     </connections>
                 </viewController>

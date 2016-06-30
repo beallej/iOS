@@ -25,8 +25,14 @@ class PeopleListViewModelTests : QuickSpec {
             }
         }
         describe("getAllPeopleWithDetails") {
-            it("should return people with full detail") {
+            it("should return people with full detail if current people are without detail") {
                 let expectedPersonWithDetail = Person(id: 1, name: "someName", age: 1, phone: "somePhoneNumber")
+                viewModel.getAllPeopleWithDetails()
+                expect(viewModel.people.value.first).toEventually(equal(expectedPersonWithDetail))
+            }
+            it("should return people without detail if current people have detail") {
+                let expectedPersonWithDetail = Person(id: 1, name: "someName")
+                viewModel.isShowingDetails.value = true
                 viewModel.getAllPeopleWithDetails()
                 expect(viewModel.people.value.first).toEventually(equal(expectedPersonWithDetail))
             }

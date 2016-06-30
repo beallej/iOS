@@ -5,7 +5,9 @@ import ReactiveCocoa
 
 class PeopleListViewController: UIViewController{
     let peopleSignal = MutableProperty<[Person]>([])
+    let isShowingDetails = MutableProperty(false)
 
+    @IBOutlet weak var showDetailsButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
 
     var viewModel: PeopleListViewModel!
@@ -16,6 +18,7 @@ class PeopleListViewController: UIViewController{
         
         viewModel = PeopleListViewModel(peopleService: PeopleService())
         peopleSignal <~ viewModel.people.producer
+        isShowingDetails <~ viewModel.isShowingDetails
 
 
         peopleSignal.producer.startWithNext { people in
@@ -25,6 +28,8 @@ class PeopleListViewController: UIViewController{
 
     @IBAction func showDetails(sender: UIButton) {
         viewModel.getAllPeopleWithDetails()
+        let label = isShowingDetails.value ? "Hide Details" : "Show Details"
+        sender.setTitle(label, forState: .Normal)
     }
 }
 

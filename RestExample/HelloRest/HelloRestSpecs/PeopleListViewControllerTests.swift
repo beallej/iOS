@@ -21,5 +21,30 @@ class PeopleListViewControllerTests : QuickSpec {
                 expect(vc.title).to(equal("Contacts"))
             }
         }
+        describe(".showDetails") {
+            it("should toggle label to hide details on first button press") {
+                let storyBoard = UIStoryboard(name:"PeopleListView", bundle: nil)
+                let vc = storyBoard.instantiateInitialViewController() as! PeopleListViewController
+
+                //calls viewDidLoad()
+                let _ = vc.view
+
+                vc.showDetailsButton.sendActionsForControlEvents(
+                    UIControlEvents.TouchUpInside)
+                expect(vc.showDetailsButton.titleLabel?.text).to(equal("Hide Details"))
+            }
+            it("should toggle label to show details if details were showing") {
+                let storyBoard = UIStoryboard(name:"PeopleListView", bundle: nil)
+                let vc = storyBoard.instantiateInitialViewController() as! PeopleListViewController
+
+                //calls viewDidLoad()
+                let _ = vc.view
+                vc.viewModel.isShowingDetails.value = true
+
+                vc.showDetailsButton.sendActionsForControlEvents(
+                    UIControlEvents.TouchUpInside)
+                expect(vc.showDetailsButton.titleLabel?.text).to(equal("Show Details"))
+            }
+        }
     }
 }

@@ -3,6 +3,7 @@ import SwiftyJSON
 import ReactiveCocoa
 
 struct PeopleListViewModel {
+    var isShowingDetails = MutableProperty(false)
     let people = MutableProperty<[Person]>([])
     let peopleService: PeopleServiceType
 
@@ -21,9 +22,20 @@ struct PeopleListViewModel {
         return people.value[index]
     }
 
+    private func toggleIsShowingDetails() {
+        isShowingDetails.value = !isShowingDetails.value
+    }
+
     func getAllPeopleWithDetails(){
-        peopleService.getAllPeopleWithDetails() { people in
-            self.people.value = people
+        if isShowingDetails.value {
+            peopleService.getAllPeople() { people in
+                self.people.value = people
+            }
+        } else {
+            peopleService.getAllPeopleWithDetails() { people in
+                self.people.value = people
+            }
         }
+        toggleIsShowingDetails()
     }
 }
