@@ -213,7 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD72BAE81D1CA73B00C230B9 /* Build configuration list for PBXNativeTarget "HelloRestSpecs" */;
 			buildPhases = (
-				EAE3D014E57140C65E5C3643 /* 📦 Check Pods Manifest.lock */,
+				EAE3D014E57140C65E5C3643 /* [CP] Check Pods Manifest.lock */,
 				AAF4A4CFC64D12F3060EC27D /* [CP] Check Pods Manifest.lock */,
 				AD72BADB1D1CA73B00C230B9 /* Sources */,
 				AD72BADC1D1CA73B00C230B9 /* Frameworks */,
@@ -237,7 +237,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD86367B1D1CA38000792EDC /* Build configuration list for PBXNativeTarget "HelloRest" */;
 			buildPhases = (
-				68E8A2EC53524B779E21F046 /* 📦 Check Pods Manifest.lock */,
+				68E8A2EC53524B779E21F046 /* [CP] Check Pods Manifest.lock */,
 				054A7AC6CC5D8E9D0785E5C3 /* [CP] Check Pods Manifest.lock */,
 				AD8636651D1CA38000792EDC /* Sources */,
 				AD8636661D1CA38000792EDC /* Frameworks */,
@@ -346,14 +346,14 @@
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-HelloRest/Pods-HelloRest-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		68E8A2EC53524B779E21F046 /* 📦 Check Pods Manifest.lock */ = {
+		68E8A2EC53524B779E21F046 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,14 +451,14 @@
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-HelloRestSpecs/Pods-HelloRestSpecs-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EAE3D014E57140C65E5C3643 /* 📦 Check Pods Manifest.lock */ = {
+		EAE3D014E57140C65E5C3643 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

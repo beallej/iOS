@@ -17,7 +17,7 @@ class PeopleListViewController: UIViewController{
         viewModel = PeopleListViewModel(peopleService: PeopleService())
         peopleSignal <~ viewModel.people.producer
 
-        peopleSignal.producer.startWithNext { people in
+        peopleSignal.producer.startWithNext { _ in
             self.tableView.reloadData()
         }
     }
