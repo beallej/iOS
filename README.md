@@ -2,7 +2,7 @@
 
 ## Setting up xcode
 
-* clone repo: git@github.com:Cramsden/iOS.git
+* clone repo: [git@github.com:Cramsden/iOS.git]
 * run `./RestExample/scripts/bootstrap`
-* open the project: `open RestExample/open RestExample/HelloRest.xcworkspace` 
+* open the project: `open RestExample/HelloRest.xcworkspace` 
 
