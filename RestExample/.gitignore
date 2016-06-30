@@ -42,3 +42,6 @@ vendor/
 
 #Node
 node_modules
+
+#Appcode Files
+*.idea
