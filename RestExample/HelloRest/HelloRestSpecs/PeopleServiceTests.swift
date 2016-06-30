@@ -21,7 +21,17 @@ class PeopleServiceTests: QuickSpec {
                 ]]
 
                 return OHHTTPStubsResponse(JSONObject: obj, statusCode: 200, headers: nil).responseTime(OHHTTPStubsDownloadSpeed3G)
+            }
 
+            stub(isHost("localhost") && isPath("/personByID") && isMethodGET()) { request in
+                let obj = [[
+                    "id": 9,
+                    "name": "Harry Potter",
+                    "age": 11,
+                    "phone": "wand"
+                ]]
+
+                return OHHTTPStubsResponse(JSONObject: obj, statusCode: 200, headers: nil).responseTime(OHHTTPStubsDownloadSpeed3G)
             }
         }
 
@@ -49,8 +59,21 @@ class PeopleServiceTests: QuickSpec {
                 expect(firstPerson?.name).toNot(beNil())
                 expect(firstPerson?.phone).to(beNil())
             }
-
         }
 
+        describe("get person by ID") {
+            it("should get a person based on ID") {
+                let peopleService = PeopleService()
+                var completionCalled = false
+                var actualPerson: Person!
+
+                peopleService.getPersonByID(withID: 9) { person in
+                    completionCalled = true
+                    actualPerson = person
+                }
+                expect(completionCalled).toEventually(beTrue())
+                expect(actualPerson).toEventually(equal(Person(id: 9, name: "Harry Potter", age: 11, phone: "wand")))
+            }
+        }
     }
 }

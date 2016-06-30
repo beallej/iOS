@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2323668B274C31217913D69E /* Pods_HelloRestSpecs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F8DBBB6AF3E9EA04852AF0 /* Pods_HelloRestSpecs.framework */; };
+		582BD4001D25747200C0FD7A /* PersonDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BD3FF1D25747200C0FD7A /* PersonDetailsViewModel.swift */; };
+		582BD4031D25750A00C0FD7A /* PersonDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BD4021D25750A00C0FD7A /* PersonDetailsViewModelTests.swift */; };
 		58E7520D1D24C31400AA7822 /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E7520C1D24C31400AA7822 /* PersonDetailsViewController.swift */; };
 		58E7520F1D24C42300AA7822 /* PersonDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58E7520E1D24C42300AA7822 /* PersonDetails.storyboard */; };
 		680950F21D241DB600EF3F63 /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680950F11D241DB600EF3F63 /* PeopleService.swift */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		085341EFA08FAC5B81CB9B86 /* Pods-HelloRestSpecs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRestSpecs.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-HelloRestSpecs/Pods-HelloRestSpecs.debug.xcconfig"; sourceTree = "<group>"; };
 		49F8DBBB6AF3E9EA04852AF0 /* Pods_HelloRestSpecs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloRestSpecs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		582BD3FF1D25747200C0FD7A /* PersonDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewModel.swift; sourceTree = "<group>"; };
+		582BD4021D25750A00C0FD7A /* PersonDetailsViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		58E7520C1D24C31400AA7822 /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
 		58E7520E1D24C42300AA7822 /* PersonDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PersonDetails.storyboard; sourceTree = "<group>"; };
 		680950F11D241DB600EF3F63 /* PeopleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
@@ -101,11 +105,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		582BD4011D2574D400C0FD7A /* PersonDetails */ = {
+			isa = PBXGroup;
+			children = (
+				582BD4021D25750A00C0FD7A /* PersonDetailsViewModelTests.swift */,
+			);
+			path = PersonDetails;
+			sourceTree = "<group>";
+		};
 		58E7520B1D24C30000AA7822 /* PersonDetails */ = {
 			isa = PBXGroup;
 			children = (
 				58E7520C1D24C31400AA7822 /* PersonDetailsViewController.swift */,
 				58E7520E1D24C42300AA7822 /* PersonDetails.storyboard */,
+				582BD3FF1D25747200C0FD7A /* PersonDetailsViewModel.swift */,
 			);
 			name = PersonDetails;
 			sourceTree = "<group>";
@@ -175,6 +188,7 @@
 		AD72BAE01D1CA73B00C230B9 /* HelloRestSpecs */ = {
 			isa = PBXGroup;
 			children = (
+				582BD4011D2574D400C0FD7A /* PersonDetails */,
 				6809510F1D242FE400EF3F63 /* Models */,
 				680950FF1D2426F300EF3F63 /* Services */,
 				680950FE1D2426D500EF3F63 /* PeopleList */,
@@ -519,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68F3F63B1D257519007CD3A4 /* PeopleTransformerTests.swift in Sources */,
+				582BD4031D25750A00C0FD7A /* PersonDetailsViewModelTests.swift in Sources */,
 				AD550FF41D1D5D33001B640B /* PeopleListViewControllerTests.swift in Sources */,
 				680951151D243C7100EF3F63 /* PeopleListViewModelTests.swift in Sources */,
 				680951111D24300200EF3F63 /* PersonTests.swift in Sources */,
@@ -531,6 +546,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				582BD4001D25747200C0FD7A /* PersonDetailsViewModel.swift in Sources */,
 				680951131D24339000EF3F63 /* PeopleTransformer.swift in Sources */,
 				6809510E1D24281B00EF3F63 /* Person.swift in Sources */,
 				6809510A1D24280700EF3F63 /* PeopleListViewController.swift in Sources */,
