@@ -29,19 +29,25 @@ class PeopleServiceTests: QuickSpec {
             OHHTTPStubs.removeAllStubs()
         }
 
-        describe(".getAllPeopleJSON") {
-            it("should get data from list all") {
+        describe(".getAllPeople") {
+            it("should get people with limited detail from list endpoint") {
                 let peopleService = PeopleService()
                 var completionCalled = false
-                var actualResponse:[Person] = []
+                var actualPeople:[Person] = []
 
-                peopleService.getAllPeopleJSON { response in
+                peopleService.getAllPeople { people in
                     completionCalled = true
-                    actualResponse = response
+                    actualPeople = people
                 }
 
                 expect(completionCalled).toEventually(beTrue())
-                expect(actualResponse).toEventually(haveCount(2))
+                expect(actualPeople).toEventually(haveCount(2))
+
+                let firstPerson = actualPeople.first
+
+                expect(firstPerson?.id).toNot(beNil())
+                expect(firstPerson?.name).toNot(beNil())
+                expect(firstPerson?.phone).to(beNil())
             }
 
         }
