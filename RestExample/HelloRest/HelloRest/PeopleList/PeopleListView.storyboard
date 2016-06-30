@@ -20,6 +20,14 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ssc-Qf-lCZ">
                                 <rect key="frame" x="30" y="0.0" width="540" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="n0u-yn-XW7">
+                                    <rect key="frame" x="0.0" y="0.0" width="540" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Show Details"/>
+                                    <connections>
+                                        <action selector="showDetails:" destination="5r4-VJ-Jr0" eventType="touchUpInside" id="cFK-XW-SUn"/>
+                                    </connections>
+                                </button>
                                 <connections>
                                     <outlet property="dataSource" destination="5r4-VJ-Jr0" id="CFT-ZO-ilL"/>
                                     <outlet property="delegate" destination="5r4-VJ-Jr0" id="SO6-7v-vXc"/>

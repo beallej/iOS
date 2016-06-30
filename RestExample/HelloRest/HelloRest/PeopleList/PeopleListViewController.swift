@@ -17,9 +17,14 @@ class PeopleListViewController: UIViewController{
         viewModel = PeopleListViewModel(peopleService: PeopleService())
         peopleSignal <~ viewModel.people.producer
 
+
         peopleSignal.producer.startWithNext { people in
             self.tableView.reloadData()
         }
+    }
+
+    @IBAction func showDetails(sender: UIButton) {
+        viewModel.getAllPeopleWithDetails()
     }
 }
 
@@ -34,7 +39,7 @@ extension PeopleListViewController : UITableViewDataSource {
         let cellIdentifier = "\(personForIndex.id)"
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) ?? UITableViewCell(style: .Default, reuseIdentifier: cellIdentifier)
 
-        cell.textLabel?.text = personForIndex.name
+        cell.textLabel?.text = "\(personForIndex.name)  \(personForIndex.phone ?? "")"
         return cell
     }
 

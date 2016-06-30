@@ -8,7 +8,7 @@ struct PeopleListViewModel {
 
     init(peopleService: PeopleServiceType) {
         self.peopleService = peopleService
-        peopleService.getAllPeopleJSON() { people in
+        peopleService.getAllPeople() { people in
             self.people.value = people
         }
     }
@@ -19,5 +19,11 @@ struct PeopleListViewModel {
 
     func getPersonAtIndex(index: Int) -> Person {
         return people.value[index]
+    }
+
+    func getAllPeopleWithDetails(){
+        peopleService.getAllPeopleWithDetails() { people in
+            self.people.value = people
+        }
     }
 }
