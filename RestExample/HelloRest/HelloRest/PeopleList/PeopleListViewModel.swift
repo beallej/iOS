@@ -8,7 +8,7 @@ struct PeopleListViewModel {
 
     init(peopleService: PeopleServiceType) {
         self.peopleService = peopleService
-        peopleService.getAllPeople() { people in
+        peopleService.getAllPeopleWithDetails { people in
             self.people.value = people
         }
     }
