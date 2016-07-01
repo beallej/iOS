@@ -33,6 +33,25 @@ class PeopleServiceTests: QuickSpec {
 
                 return OHHTTPStubsResponse(JSONObject: obj, statusCode: 200, headers: nil).responseTime(OHHTTPStubsDownloadSpeed3G)
             }
+
+            stub(isHost("localhost") && isPath("/listAll") && isMethodGET()) { request in
+
+                let obj = [[
+                    "id": 7,
+                    "name": "Ballard Craig",
+                    "age": 19,
+                    "phone": "somePhone"
+                    ],
+                    [
+                        "id": 8,
+                        "name": "Brown Holt",
+                        "age": 10,
+                        "phone" : "somePhone"
+                    ]]
+
+                return OHHTTPStubsResponse(JSONObject: obj, statusCode: 200, headers: nil).responseTime(OHHTTPStubsDownloadSpeed3G)
+                
+            }
         }
 
         afterEach {
@@ -58,6 +77,26 @@ class PeopleServiceTests: QuickSpec {
                 expect(firstPerson?.id).toNot(beNil())
                 expect(firstPerson?.name).toNot(beNil())
                 expect(firstPerson?.phone).to(beNil())
+            }
+        }
+        
+        describe(".getAllPeopleWithDetails"){
+            it("should get people with details from listAll endpoint") {
+                let peopleService = PeopleService()
+                var completionCalled = false
+                var actualPeople:[Person] = []
+
+                peopleService.getAllPeopleWithDetails { people in
+                    completionCalled = true
+                    actualPeople = people
+                }
+
+                expect(completionCalled).toEventually(beTrue())
+                expect(actualPeople).toEventually(haveCount(2))
+
+                 let firstPerson = actualPeople.first
+                expect(firstPerson?.phone).toNot(beNil())
+
             }
         }
 

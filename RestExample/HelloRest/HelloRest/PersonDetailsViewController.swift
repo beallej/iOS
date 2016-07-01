@@ -30,6 +30,4 @@ class PersonDetailsViewController : UIViewController {
         phoneLabel.text = viewModel.phone
         ageLabel.text = viewModel.age
     }
-
-
 }
