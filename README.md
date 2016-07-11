@@ -1,4 +1,4 @@
-# iOS Workshop Part II 
+# iOS Workshop Part II (Starting Point)
 ## Prerequisites
 * A basic understanding of Swift
   * Ability to create a basic, single-view app
@@ -47,5 +47,7 @@
 
 ### Reactive Cocoa
 * http://ifnotapps.com/2013/07/25/reactivecocoa-from-the-ground-floor-part1/
+
+# Next Branch: `listWithDetails`
 
 
