@@ -22,6 +22,7 @@
 		680951131D24339000EF3F63 /* PeopleTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680951121D24339000EF3F63 /* PeopleTransformer.swift */; };
 		680951151D243C7100EF3F63 /* PeopleListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680951141D243C7100EF3F63 /* PeopleListViewModelTests.swift */; };
 		680951171D243E0700EF3F63 /* PeopleServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680951161D243E0700EF3F63 /* PeopleServiceMock.swift */; };
+		6823980B1D34334800446379 /* PersonDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6823980A1D34334800446379 /* PersonDetailsViewControllerTests.swift */; };
 		68F3F63B1D257519007CD3A4 /* PeopleTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F3F63A1D257519007CD3A4 /* PeopleTransformerTests.swift */; };
 		AD550FF41D1D5D33001B640B /* PeopleListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD550FF31D1D5D33001B640B /* PeopleListViewControllerTests.swift */; };
 		AD86366D1D1CA38000792EDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD86366C1D1CA38000792EDC /* AppDelegate.swift */; };
@@ -58,6 +59,7 @@
 		680951121D24339000EF3F63 /* PeopleTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTransformer.swift; sourceTree = "<group>"; };
 		680951141D243C7100EF3F63 /* PeopleListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleListViewModelTests.swift; sourceTree = "<group>"; };
 		680951161D243E0700EF3F63 /* PeopleServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleServiceMock.swift; sourceTree = "<group>"; };
+		6823980A1D34334800446379 /* PersonDetailsViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewControllerTests.swift; sourceTree = "<group>"; };
 		68F3F63A1D257519007CD3A4 /* PeopleTransformerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTransformerTests.swift; sourceTree = "<group>"; };
 		AAA49A9A49AFCAAE85CD5DFA /* Pods_HelloRest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloRest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD550FF31D1D5D33001B640B /* PeopleListViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleListViewControllerTests.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				582BD4021D25750A00C0FD7A /* PersonDetailsViewModelTests.swift */,
+				6823980A1D34334800446379 /* PersonDetailsViewControllerTests.swift */,
 			);
 			path = PersonDetails;
 			sourceTree = "<group>";
@@ -343,21 +346,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		054A7AC6CC5D8E9D0785E5C3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		32DFD3BCB2C9E6D12B564D87 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,21 +359,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-HelloRest/Pods-HelloRest-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		68E8A2EC53524B779E21F046 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		83B513C97F0056D8F55E50AB /* [CP] Embed Pods Frameworks */ = {
@@ -431,21 +404,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-HelloRest/Pods-HelloRest-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AAF4A4CFC64D12F3060EC27D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B557A96BF53F24D41D4DCDDF /* 📦 Embed Pods Frameworks */ = {
@@ -508,21 +466,6 @@
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-HelloRestSpecs/Pods-HelloRestSpecs-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EAE3D014E57140C65E5C3643 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		F144161428D14E3EA3907233 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -560,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6823980B1D34334800446379 /* PersonDetailsViewControllerTests.swift in Sources */,
 				68F3F63B1D257519007CD3A4 /* PeopleTransformerTests.swift in Sources */,
 				582BD4031D25750A00C0FD7A /* PersonDetailsViewModelTests.swift in Sources */,
 				AD550FF41D1D5D33001B640B /* PeopleListViewControllerTests.swift in Sources */,

@@ -8,20 +8,22 @@ class PersonDetailsViewController : UIViewController {
 
     var viewModel: PersonDetailsViewModel!
     let personSignal = MutableProperty<Person?>(nil)
+    var peopleService:PeopleServiceType = PeopleService()
 
-    var personID: Int? {
-        didSet {
-            viewModel = PersonDetailsViewModel(withID: personID!, peopleService: PeopleService())
-            personSignal <~ viewModel.person.producer
-        }
-    }
+    var personID: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Details"
+        personID = 1
+        setUpViewModel()
+    }
+    func setUpViewModel() {
+        viewModel = PersonDetailsViewModel(withID: personID!, peopleService: peopleService)
+        personSignal <~ viewModel.person.producer
 
-        personSignal.producer.startWithNext { _ in
-            self.updateLabels()
+        personSignal.producer.startWithNext {[weak self] _ in
+            self?.updateLabels()
         }
     }
 
