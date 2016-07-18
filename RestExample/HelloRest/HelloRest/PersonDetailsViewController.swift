@@ -15,7 +15,6 @@ class PersonDetailsViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Details"
-        personID = 1
         setUpViewModel()
     }
     func setUpViewModel() {
