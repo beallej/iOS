@@ -34,6 +34,17 @@ class PeopleServiceTests: QuickSpec {
                 return OHHTTPStubsResponse(JSONObject: obj, statusCode: 200, headers: nil).responseTime(OHHTTPStubsDownloadSpeed3G)
             }
 
+            stub(isHost("localhost") && isPath("/add") && isMethodPOST()) { request in
+                let obj = [[
+                    "id": 11,
+                    "name": "someNewName",
+                    "age": 22,
+                    "phone": "someNewPhone"
+                    ]]
+
+                return OHHTTPStubsResponse(JSONObject: obj, statusCode: 200, headers: nil).responseTime(OHHTTPStubsDownloadSpeed3G)
+            }
+
             stub(isHost("localhost") && isPath("/listAll") && isMethodGET()) { request in
 
                 let obj = [[
@@ -112,6 +123,24 @@ class PeopleServiceTests: QuickSpec {
                 }
                 expect(completionCalled).toEventually(beTrue())
                 expect(actualPerson).toEventually(equal(Person(id: 9, name: "Harry Potter", age: 11, phone: "wand")))
+            }
+        }
+
+        describe("add a new contact") {
+            it("should add a new person with correct JSON") {
+                let peopleService = PeopleService()
+                var completionCalled = false
+                var addedPerson: Person!
+
+                let personToAdd = Person(id: 11, name: "someNewName", age: 22, phone: "someNewPhone")
+
+                peopleService.addNewPerson(personToAdd) { person in
+                    completionCalled = true
+                    addedPerson = person
+                }
+
+                expect(completionCalled).toEventually(beTrue())
+                expect(personToAdd).to(equal(addedPerson))
             }
         }
     }

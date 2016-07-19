@@ -8,4 +8,8 @@ struct PeopleTransformer {
             Person(id: json["id"].intValue, name: json["name"].stringValue, age: json["age"].int, phone: json["phone"].string)
         }
     }
+
+    static func transformPersonToParameterDictionary(person: Person) -> [String : String] {
+        return ["" : ""]
+    }
 }
