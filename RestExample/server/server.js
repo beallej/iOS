@@ -1,6 +1,7 @@
 var express = require('express');
 var _ = require('underscore');
 var linq = require('linq');
+var bodyParser = require('body-parser');
 
 var app = express()
 
@@ -54,6 +55,8 @@ var people = [
     "phone": "+1 (961) 570-2724"
   }
 ]
+
+app.use(bodyParser.json())
 
 app.get('/', function (req, res) {
   res.send('Welcome!');
