@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CtS-eq-HdK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CtS-eq-HdK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Person Details View Controller-->
@@ -16,80 +15,8 @@
                     <view key="view" contentMode="scaleToFill" id="14r-qG-VaF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzy-yU-FFT">
-                                <rect key="frame" x="40" y="30" width="50" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yub-Of-pHc">
-                                <rect key="frame" x="40" y="59" width="50" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mf-ef-O75">
-                                <rect key="frame" x="40" y="88" width="60" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cK-WM-U4Q">
-                                <rect key="frame" x="105" y="30" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqC-6F-XP7">
-                                <rect key="frame" x="105" y="59" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cl-kG-7aj">
-                                <rect key="frame" x="105" y="88" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Yub-Of-pHc" firstAttribute="height" secondItem="3Mf-ef-O75" secondAttribute="height" id="6Mc-wO-wBT"/>
-                            <constraint firstItem="fqC-6F-XP7" firstAttribute="leading" secondItem="7cK-WM-U4Q" secondAttribute="leading" id="9Hf-vx-5yk"/>
-                            <constraint firstItem="yzy-yU-FFT" firstAttribute="height" secondItem="Yub-Of-pHc" secondAttribute="height" id="JtN-Ov-gOJ"/>
-                            <constraint firstItem="yzy-yU-FFT" firstAttribute="top" secondItem="zEZ-Hv-7ke" secondAttribute="bottom" constant="10" id="KHx-Rv-vIu"/>
-                            <constraint firstItem="yzy-yU-FFT" firstAttribute="leading" secondItem="14r-qG-VaF" secondAttribute="leadingMargin" constant="20" id="L7Y-7n-806"/>
-                            <constraint firstItem="3Mf-ef-O75" firstAttribute="top" secondItem="Yub-Of-pHc" secondAttribute="bottom" constant="8" id="NKi-i0-l4c"/>
-                            <constraint firstItem="fqC-6F-XP7" firstAttribute="width" secondItem="7cK-WM-U4Q" secondAttribute="width" id="Sko-yW-rbn"/>
-                            <constraint firstItem="Yub-Of-pHc" firstAttribute="leading" secondItem="yzy-yU-FFT" secondAttribute="leading" id="V24-3J-aaj"/>
-                            <constraint firstItem="2cl-kG-7aj" firstAttribute="top" secondItem="fqC-6F-XP7" secondAttribute="bottom" constant="8" id="V71-VO-9Lr"/>
-                            <constraint firstItem="2cl-kG-7aj" firstAttribute="height" secondItem="fqC-6F-XP7" secondAttribute="height" id="X7S-Eb-AHd"/>
-                            <constraint firstItem="Yub-Of-pHc" firstAttribute="top" secondItem="yzy-yU-FFT" secondAttribute="bottom" constant="8" id="c4J-9i-Y2E"/>
-                            <constraint firstItem="7cK-WM-U4Q" firstAttribute="height" secondItem="yzy-yU-FFT" secondAttribute="height" id="lih-uO-w6w"/>
-                            <constraint firstItem="7cK-WM-U4Q" firstAttribute="leading" secondItem="yzy-yU-FFT" secondAttribute="trailing" constant="15" id="ovR-SA-mcR"/>
-                            <constraint firstItem="2cl-kG-7aj" firstAttribute="leading" secondItem="fqC-6F-XP7" secondAttribute="leading" id="tOp-AQ-roo"/>
-                            <constraint firstItem="fqC-6F-XP7" firstAttribute="top" secondItem="7cK-WM-U4Q" secondAttribute="bottom" constant="8" id="tdH-LM-E2A"/>
-                            <constraint firstItem="7cK-WM-U4Q" firstAttribute="top" secondItem="yzy-yU-FFT" secondAttribute="top" id="vyp-ik-1xO"/>
-                            <constraint firstItem="fqC-6F-XP7" firstAttribute="width" secondItem="7cK-WM-U4Q" secondAttribute="width" id="vzn-Cj-yZo"/>
-                            <constraint firstItem="yzy-yU-FFT" firstAttribute="width" secondItem="Yub-Of-pHc" secondAttribute="width" id="wmY-eZ-8wy"/>
-                            <constraint firstItem="Yub-Of-pHc" firstAttribute="width" secondItem="3Mf-ef-O75" secondAttribute="width" constant="-10" id="xx4-iD-kK1"/>
-                            <constraint firstItem="3Mf-ef-O75" firstAttribute="leading" secondItem="Yub-Of-pHc" secondAttribute="leading" id="yfz-W4-Evj"/>
-                            <constraint firstItem="fqC-6F-XP7" firstAttribute="height" secondItem="7cK-WM-U4Q" secondAttribute="height" id="zQK-Kv-VbU"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Sko-yW-rbn"/>
-                                <exclude reference="vzn-Cj-yZo"/>
-                            </mask>
-                        </variation>
                     </view>
-                    <connections>
-                        <outlet property="ageLabel" destination="fqC-6F-XP7" id="8dv-ga-ar3"/>
-                        <outlet property="nameLabel" destination="7cK-WM-U4Q" id="OvH-SD-b3Z"/>
-                        <outlet property="phoneLabel" destination="2cl-kG-7aj" id="RRw-jL-Vh4"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="86y-f6-Z4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
