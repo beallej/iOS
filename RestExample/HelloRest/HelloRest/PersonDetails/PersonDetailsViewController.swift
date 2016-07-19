@@ -13,42 +13,6 @@ class PersonDetailsViewController : UIViewController {
         super.viewDidLoad()
         self.title = "Details"
 
-        //desc labels:
-        let nameIcon = UIImageView(forAutoLayout: ())
-        view.addSubview(nameIcon)
-        nameIcon.autoSetDimension(.Width, toSize: 20.0)
-        nameIcon.autoSetDimension(.Height, toSize: 20.0)
-        nameIcon.autoPinEdgeToSuperviewEdge(.Leading, withInset: 20.0)
-        nameIcon.autoPinEdgeToSuperviewEdge(.Top, withInset: 80.0)
-        nameIcon.image = UIImage(named: "NameIcon")
-
-        let nameFieldLabel = UILabel(forAutoLayout: ())
-        view.addSubview(nameFieldLabel)
-        nameFieldLabel.autoSetDimension(.Height, toSize: 20.0)
-        nameFieldLabel.autoSetDimension(.Width, toSize: 100.0)
-        nameFieldLabel.autoPinEdge(.Leading, toEdge: .Trailing, ofView: nameIcon, withOffset: 10.0)
-        nameFieldLabel.autoPinEdge(.Top, toEdge: .Top, ofView: nameIcon)
-        nameFieldLabel.text = "Name:"
-
-
-
-
-        let ageFieldLabel = UILabel(forAutoLayout: ())
-        view.addSubview(ageFieldLabel)
-        ageFieldLabel.autoPinEdge(.Leading, toEdge: .Leading, ofView: nameFieldLabel)
-        ageFieldLabel.autoPinEdge(.Top, toEdge: .Bottom, ofView: nameFieldLabel, withOffset: 20.0)
-        ageFieldLabel.autoSetDimension(.Height, toSize: 20.0)
-        ageFieldLabel.autoSetDimension(.Width, toSize: 100.0)
-        ageFieldLabel.text = "Age:"
-
-        let phoneFieldLabel = UILabel(forAutoLayout: ())
-        view.addSubview(phoneFieldLabel)
-        phoneFieldLabel.autoPinEdge(.Leading, toEdge: .Leading, ofView: ageFieldLabel)
-        phoneFieldLabel.autoPinEdge(.Top, toEdge: .Bottom, ofView: ageFieldLabel, withOffset: 20.0)
-        phoneFieldLabel.autoSetDimension(.Height, toSize: 20.0)
-        phoneFieldLabel.autoSetDimension(.Width, toSize: 100.0)
-        phoneFieldLabel.text = "Phone:"
-
         setUpViewModel()
     }
     func setUpViewModel() {
@@ -61,8 +25,7 @@ class PersonDetailsViewController : UIViewController {
     }
 
     func updateLabels() {
-//        nameLabel.text = viewModel.name
-//        phoneLabel.text = viewModel.phone
-//        ageLabel.text = viewModel.age
+        guard let detailsView = view as? PersonDetailsView else { return }
+        detailsView.updateLabels(viewModel.name, phone: viewModel.phone, age: viewModel.age)
     }
 }
