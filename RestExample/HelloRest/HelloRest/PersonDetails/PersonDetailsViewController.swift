@@ -10,7 +10,7 @@ class PersonDetailsViewController : UIViewController {
     let personSignal = MutableProperty<Person?>(nil)
     var peopleService:PeopleServiceType = PeopleService()
 
-    var personID: Int?
+    var personID: Int? = -1
 
     override func viewDidLoad() {
         super.viewDidLoad()

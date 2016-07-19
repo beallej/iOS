@@ -30,6 +30,12 @@ class PeopleListViewController: UIViewController{
         viewController.personID = id
         pushViewControllerOntoNavigationController(withViewController: viewController, animated: true)
     }
+    
+    @IBAction func goToAddContactView(sender: AnyObject) {
+        let targetStoryboard = UIStoryboard(name: "AddContact", bundle: nil)
+        let viewController = targetStoryboard.instantiateInitialViewController() as! AddContactViewController
+        pushViewControllerOntoNavigationController(withViewController: viewController, animated: true)
+    }
 
     //allows the above logic to be tested by abstracting the untestable part
     func pushViewControllerOntoNavigationController(withViewController viewController: UIViewController, animated: Bool) {
@@ -55,6 +61,7 @@ extension PeopleListViewController : UITableViewDataSource, UITableViewDelegate 
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let personID = viewModel.getPersonAtIndex(indexPath.row).id
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         goToPersonDetailsView(withID: personID)
     }
 

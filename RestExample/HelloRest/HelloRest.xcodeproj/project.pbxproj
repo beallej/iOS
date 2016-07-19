@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2323668B274C31217913D69E /* Pods_HelloRestSpecs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F8DBBB6AF3E9EA04852AF0 /* Pods_HelloRestSpecs.framework */; };
+		581DFC211D3EAF0D0098222F /* AddContact.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 581DFC201D3EAF0D0098222F /* AddContact.storyboard */; };
+		581DFC231D3EAF280098222F /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581DFC221D3EAF280098222F /* AddContactViewController.swift */; };
 		582BD4031D25750A00C0FD7A /* PersonDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BD4021D25750A00C0FD7A /* PersonDetailsViewModelTests.swift */; };
 		5832F0011D3D7D5100B1C6B0 /* PersonDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5832EFFE1D3D7D5100B1C6B0 /* PersonDetailsViewModel.swift */; };
 		5832F0021D3D7D5100B1C6B0 /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5832EFFF1D3D7D5100B1C6B0 /* PersonDetailsViewController.swift */; };
@@ -45,6 +47,8 @@
 /* Begin PBXFileReference section */
 		085341EFA08FAC5B81CB9B86 /* Pods-HelloRestSpecs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRestSpecs.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-HelloRestSpecs/Pods-HelloRestSpecs.debug.xcconfig"; sourceTree = "<group>"; };
 		49F8DBBB6AF3E9EA04852AF0 /* Pods_HelloRestSpecs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloRestSpecs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		581DFC201D3EAF0D0098222F /* AddContact.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddContact.storyboard; sourceTree = "<group>"; };
+		581DFC221D3EAF280098222F /* AddContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		582BD4021D25750A00C0FD7A /* PersonDetailsViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		5832EFFE1D3D7D5100B1C6B0 /* PersonDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewModel.swift; sourceTree = "<group>"; };
 		5832EFFF1D3D7D5100B1C6B0 /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +109,15 @@
 				C6AA069526280F5372FDAE91 /* Pods-HelloRest.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		581DFC1F1D3EAEE00098222F /* AddContact */ = {
+			isa = PBXGroup;
+			children = (
+				581DFC201D3EAF0D0098222F /* AddContact.storyboard */,
+				581DFC221D3EAF280098222F /* AddContactViewController.swift */,
+			);
+			path = AddContact;
 			sourceTree = "<group>";
 		};
 		582BD4011D2574D400C0FD7A /* PersonDetails */ = {
@@ -224,6 +237,7 @@
 		AD86366B1D1CA38000792EDC /* HelloRest */ = {
 			isa = PBXGroup;
 			children = (
+				581DFC1F1D3EAEE00098222F /* AddContact */,
 				58E7520B1D24C30000AA7822 /* PersonDetails */,
 				680950FD1D24266D00EF3F63 /* PeopleList */,
 				680950FA1D24263000EF3F63 /* Models */,
@@ -340,6 +354,7 @@
 				AD8636741D1CA38000792EDC /* Assets.xcassets in Resources */,
 				AD8636721D1CA38000792EDC /* Main.storyboard in Resources */,
 				5832F0031D3D7D5100B1C6B0 /* PersonDetails.storyboard in Resources */,
+				581DFC211D3EAF0D0098222F /* AddContact.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +536,7 @@
 				5832F0021D3D7D5100B1C6B0 /* PersonDetailsViewController.swift in Sources */,
 				680951131D24339000EF3F63 /* PeopleTransformer.swift in Sources */,
 				6809510E1D24281B00EF3F63 /* Person.swift in Sources */,
+				581DFC231D3EAF280098222F /* AddContactViewController.swift in Sources */,
 				5832F0011D3D7D5100B1C6B0 /* PersonDetailsViewModel.swift in Sources */,
 				6809510A1D24280700EF3F63 /* PeopleListViewController.swift in Sources */,
 				6809510B1D24280700EF3F63 /* PeopleListViewModel.swift in Sources */,

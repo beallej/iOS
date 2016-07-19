@@ -43,6 +43,20 @@ class PeopleListViewControllerTests : QuickSpec {
                 expect(detailsVC.personID).to(equal(id))
             }
         }
+
+        describe("go to add contact view button") {
+            var testableVC: TestablePeopleListViewController!
+
+            beforeEach {
+                testableVC = TestablePeopleListViewController()
+            }
+
+            it("should push addContactViewController") {
+                testableVC.goToAddContactView(UIButton())
+
+                expect(testableVC.didPresentViewController).to(beAKindOf(AddContactViewController.self))
+            }
+        }
     }
 }
 
