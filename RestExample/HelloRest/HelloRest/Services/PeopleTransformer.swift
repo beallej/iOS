@@ -9,7 +9,7 @@ struct PeopleTransformer {
         }
     }
 
-    static func transformPersonToParameterDictionary(person: Person) -> [String : String] {
-        return ["" : ""]
+    static func transformPersonToParameterDictionary(person: Person) -> [String : AnyObject] {
+        return ["id": person.id, "name": person.name, "age": person.age ?? -1, "phone": person.phone ?? ""]
     }
 }

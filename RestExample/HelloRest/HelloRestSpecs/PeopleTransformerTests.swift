@@ -27,13 +27,26 @@ class PeopleTransformerTests: QuickSpec {
 
         describe("transform person"){
             it("should transform person into paramter dictionary") {
-                let expectedParameters: [String:AnyObject] = ["id": 1, "name":"someName", "age":10, "phone":"somePhone"]
-                let person = Person(id: 1, name: "someName", age: 10, phone: "somePhone")
+                let id = 1
+                let name = "someName"
+                let age = 10
+                let phone = "somePhone"
+
+                let person = Person(id: id, name: name, age: age, phone: phone)
 
                 let actualParameters = PeopleTransformer.transformPersonToParameterDictionary(person)
 
                 //FIX THIS PLZ
-                expect(true).to(beFalse())
+                let actualID = actualParameters["id"] as! Int
+                let actualName = actualParameters["name"] as! String
+                let actualAge = actualParameters["age"] as! Int
+                let actualPhone = actualParameters["phone"] as! String
+
+
+                expect(id).to(equal(actualID))
+                expect(name).to(equal(actualName))
+                expect(age).to(equal(actualAge))
+                expect(phone).to(equal(actualPhone))
             }
         }
     }
