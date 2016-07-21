@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Rf-Sb-EaW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Rf-Sb-EaW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Add Contact View Controller-->
@@ -15,12 +16,85 @@
                     <view key="view" contentMode="scaleToFill" id="CRw-jw-3Tw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIBackground" translatesAutoresizingMaskIntoConstraints="NO" id="HSR-kL-rqF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="630"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OYd-Ns-Pjd" customClass="AddContactTextField" customModule="HelloRest" customModuleProvider="target">
+                                <rect key="frame" x="60" y="304" width="480" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="m7S-GK-nFg"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="m7S-GK-nFg"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a2x-6L-TfI" customClass="AddContactTextField" customModule="HelloRest" customModuleProvider="target">
+                                <rect key="frame" x="60" y="359" width="480" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SzE-d4-bib" customClass="AddContactTextField" customModule="HelloRest" customModuleProvider="target">
+                                <rect key="frame" x="60" y="414" width="480" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEp-Va-zgQ">
+                                <rect key="frame" x="60" y="494" width="480" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATE A NEW CONTACT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8H-Z2-mln">
+                                <rect key="frame" x="196" y="114" width="208" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SzE-d4-bib" firstAttribute="centerX" secondItem="CRw-jw-3Tw" secondAttribute="centerX" id="CPH-j6-ur5"/>
+                            <constraint firstItem="pEp-Va-zgQ" firstAttribute="centerX" secondItem="CRw-jw-3Tw" secondAttribute="centerX" id="LwS-G2-DCr"/>
+                            <constraint firstItem="OMz-YX-aax" firstAttribute="top" secondItem="HSR-kL-rqF" secondAttribute="bottom" constant="-30" id="Onf-dk-GP0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a2x-6L-TfI" secondAttribute="trailing" constant="40" id="QF2-HH-WzJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OYd-Ns-Pjd" secondAttribute="trailing" constant="40" id="S7P-FH-DG6"/>
+                            <constraint firstItem="HSR-kL-rqF" firstAttribute="top" secondItem="CRw-jw-3Tw" secondAttribute="topMargin" id="Vi9-We-CgA"/>
+                            <constraint firstItem="pEp-Va-zgQ" firstAttribute="top" secondItem="SzE-d4-bib" secondAttribute="bottom" constant="50" id="X3O-2f-f4B"/>
+                            <constraint firstItem="HSR-kL-rqF" firstAttribute="leading" secondItem="CRw-jw-3Tw" secondAttribute="leadingMargin" constant="-20" id="XW1-oW-oOx"/>
+                            <constraint firstItem="N8H-Z2-mln" firstAttribute="top" secondItem="jfq-Zu-nKB" secondAttribute="bottom" constant="94" id="Y53-o8-9pP"/>
+                            <constraint firstItem="a2x-6L-TfI" firstAttribute="top" secondItem="OYd-Ns-Pjd" secondAttribute="bottom" constant="25" id="ZwV-ao-vGg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pEp-Va-zgQ" secondAttribute="trailing" constant="40" id="aJP-g2-OsO"/>
+                            <constraint firstItem="OYd-Ns-Pjd" firstAttribute="centerX" secondItem="CRw-jw-3Tw" secondAttribute="centerX" id="cQV-4S-NzV"/>
+                            <constraint firstItem="OYd-Ns-Pjd" firstAttribute="leading" secondItem="CRw-jw-3Tw" secondAttribute="leadingMargin" constant="40" id="jR0-VP-KV1"/>
+                            <constraint firstItem="a2x-6L-TfI" firstAttribute="leading" secondItem="CRw-jw-3Tw" secondAttribute="leadingMargin" constant="40" id="jYd-Kw-hY7"/>
+                            <constraint firstItem="SzE-d4-bib" firstAttribute="top" secondItem="a2x-6L-TfI" secondAttribute="bottom" constant="25" id="lP0-5V-wpq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SzE-d4-bib" secondAttribute="trailing" constant="40" id="lgB-4D-J9n"/>
+                            <constraint firstItem="N8H-Z2-mln" firstAttribute="centerX" secondItem="CRw-jw-3Tw" secondAttribute="centerX" id="mX5-uU-N1w"/>
+                            <constraint firstItem="a2x-6L-TfI" firstAttribute="centerX" secondItem="CRw-jw-3Tw" secondAttribute="centerX" id="n0J-zo-rr1"/>
+                            <constraint firstItem="SzE-d4-bib" firstAttribute="leading" secondItem="CRw-jw-3Tw" secondAttribute="leadingMargin" constant="40" id="pOG-Ad-Td7"/>
+                            <constraint firstItem="OYd-Ns-Pjd" firstAttribute="top" secondItem="N8H-Z2-mln" secondAttribute="bottom" constant="169" id="rue-sP-dPs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HSR-kL-rqF" secondAttribute="trailing" constant="-20" id="tBO-Pq-HRJ"/>
+                            <constraint firstItem="pEp-Va-zgQ" firstAttribute="leading" secondItem="CRw-jw-3Tw" secondAttribute="leadingMargin" constant="40" id="yRA-wk-7On"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="continueButton" destination="pEp-Va-zgQ" id="lxy-fl-L8X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Sz-Re-rHb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="123" y="281"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="UIBackground" width="600" height="900"/>
+    </resources>
 </document>
