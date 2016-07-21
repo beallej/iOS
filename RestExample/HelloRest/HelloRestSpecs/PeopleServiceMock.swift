@@ -5,6 +5,7 @@ import Foundation
 class PeopleServiceMock: PeopleServiceType {
     var getAllPeopleCalled = false
     var getPersonByIDCalled = false
+    var addNewPersonCalled = false
     var didCallPersonByIDWithID: Int?
     var getAllPeopleWithDetailsCalled = false
     var stubbedPeopleWithoutDetail = [Person(id: 1, name: "someName")]
@@ -24,5 +25,10 @@ class PeopleServiceMock: PeopleServiceType {
     func getAllPeopleWithDetails(onCompletion:([Person])-> Void) {
         getAllPeopleWithDetailsCalled = true
         onCompletion(stubbedPeopleWithoutDetail)
+    }
+
+    func addNewPerson(person: Person, onCompletion: () -> Void) {
+        addNewPersonCalled = true
+        onCompletion()
     }
 }

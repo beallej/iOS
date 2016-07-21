@@ -51,6 +51,9 @@
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="continueButtonPressed:" destination="6Rf-Sb-EaW" eventType="touchUpInside" id="xSc-Oz-c6r"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATE A NEW CONTACT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8H-Z2-mln">
                                 <rect key="frame" x="196" y="114" width="208" height="21"/>
@@ -86,7 +89,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="NameField" destination="OYd-Ns-Pjd" id="EMt-pY-XDs"/>
+                        <outlet property="ageField" destination="SzE-d4-bib" id="ZAS-yu-WuC"/>
                         <outlet property="continueButton" destination="pEp-Va-zgQ" id="lxy-fl-L8X"/>
+                        <outlet property="phoneField" destination="a2x-6L-TfI" id="IC9-CQ-dou"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Sz-Re-rHb" userLabel="First Responder" sceneMemberID="firstResponder"/>

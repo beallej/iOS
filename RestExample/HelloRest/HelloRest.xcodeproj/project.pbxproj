@@ -25,6 +25,7 @@
 		680951151D243C7100EF3F63 /* PeopleListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680951141D243C7100EF3F63 /* PeopleListViewModelTests.swift */; };
 		680951171D243E0700EF3F63 /* PeopleServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680951161D243E0700EF3F63 /* PeopleServiceMock.swift */; };
 		6823980B1D34334800446379 /* PersonDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6823980A1D34334800446379 /* PersonDetailsViewControllerTests.swift */; };
+		6891E44A1D41331700A15CB1 /* AddContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6891E4491D41331700A15CB1 /* AddContactViewModel.swift */; };
 		68F3F63B1D257519007CD3A4 /* PeopleTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F3F63A1D257519007CD3A4 /* PeopleTransformerTests.swift */; };
 		AD550FF41D1D5D33001B640B /* PeopleListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD550FF31D1D5D33001B640B /* PeopleListViewControllerTests.swift */; };
 		AD86366D1D1CA38000792EDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD86366C1D1CA38000792EDC /* AppDelegate.swift */; };
@@ -64,6 +65,7 @@
 		680951141D243C7100EF3F63 /* PeopleListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleListViewModelTests.swift; sourceTree = "<group>"; };
 		680951161D243E0700EF3F63 /* PeopleServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleServiceMock.swift; sourceTree = "<group>"; };
 		6823980A1D34334800446379 /* PersonDetailsViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewControllerTests.swift; sourceTree = "<group>"; };
+		6891E4491D41331700A15CB1 /* AddContactViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactViewModel.swift; sourceTree = "<group>"; };
 		68F3F63A1D257519007CD3A4 /* PeopleTransformerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTransformerTests.swift; sourceTree = "<group>"; };
 		AAA49A9A49AFCAAE85CD5DFA /* Pods_HelloRest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloRest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD550FF31D1D5D33001B640B /* PeopleListViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleListViewControllerTests.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			children = (
 				581DFC201D3EAF0D0098222F /* AddContact.storyboard */,
 				581DFC221D3EAF280098222F /* AddContactViewController.swift */,
+				6891E4491D41331700A15CB1 /* AddContactViewModel.swift */,
 			);
 			path = AddContact;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				6809510E1D24281B00EF3F63 /* Person.swift in Sources */,
 				581DFC231D3EAF280098222F /* AddContactViewController.swift in Sources */,
 				5832F0011D3D7D5100B1C6B0 /* PersonDetailsViewModel.swift in Sources */,
+				6891E44A1D41331700A15CB1 /* AddContactViewModel.swift in Sources */,
 				6809510A1D24280700EF3F63 /* PeopleListViewController.swift in Sources */,
 				6809510B1D24280700EF3F63 /* PeopleListViewModel.swift in Sources */,
 				680950F21D241DB600EF3F63 /* PeopleService.swift in Sources */,

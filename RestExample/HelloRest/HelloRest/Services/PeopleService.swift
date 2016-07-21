@@ -6,6 +6,7 @@ protocol PeopleServiceType {
     func getAllPeople(onCompletion: ([Person]) -> Void)
     func getPersonByID(withID id: Int, onCompletion: (Person) -> Void)
     func getAllPeopleWithDetails(onCompletion:([Person])-> Void)
+    func addNewPerson(person: Person, onCompletion:() -> Void) 
 }
 
 class PeopleService : PeopleServiceType {
@@ -49,22 +50,14 @@ class PeopleService : PeopleServiceType {
         }
     }
 
-    func addNewPerson(person: Person, onCompletion:(Person) -> Void) {
-        var parameters: [String:String] = [:]
-        parameters["id"] = "\(person.id)"
-        parameters["name"] = person.name
-        parameters["age"] = "\(person.age)"
-        parameters["phone"] = person.phone
+    func addNewPerson(person: Person, onCompletion:() -> Void) {
+       let parameters = PeopleTransformer.transformPersonToParameterDictionary(person)
 
         Alamofire
             .request(.POST, "http://localhost:8000/add", parameters: parameters, encoding: .JSON)
             .validate(statusCode: 200..<400)
-            .responseJSON { response in
-                if let value = response.result.value {
-                    let json = JSON(value)
-                    let person = PeopleTransformer.transformListOfPeople(json)
-                    onCompletion(person.first ?? Person(id: -1, name: ""))
-                }
+            .responseJSON { _ in
+                    onCompletion()
         }
     }
 }

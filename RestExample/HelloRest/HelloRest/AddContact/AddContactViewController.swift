@@ -2,6 +2,16 @@ import UIKit
 
 class AddContactViewController : UIViewController {
 
+
+    @IBOutlet weak var NameField: AddContactTextField!
+
+
+    @IBOutlet weak var phoneField: AddContactTextField!
+
+
+    @IBOutlet weak var ageField: AddContactTextField!
+
+
     @IBOutlet weak var continueButton: UIButton! {
         didSet {
             continueButton?.layer.borderWidth = 1.0
@@ -9,8 +19,21 @@ class AddContactViewController : UIViewController {
             continueButton?.layer.cornerRadius = 23.0
         }
     }
-    override func viewDidLoad() {
+
+    var peopleService: PeopleServiceType = PeopleService()
+
+    @IBAction func continueButtonPressed(sender: UIButton) {
+        if let name = NameField.text,
+            phone = phoneField.text,
+            age = ageField.text {
+            let person = Person(id: 0, name: name, age: Int(age) , phone: phone)
+            peopleService.addNewPerson(person) {_ in 
+                print("yay!")
+
+            }
+        }
     }
+
 }
 
 class AddContactTextField : UITextField {
