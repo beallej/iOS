@@ -14,6 +14,7 @@
 		5832F0011D3D7D5100B1C6B0 /* PersonDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5832EFFE1D3D7D5100B1C6B0 /* PersonDetailsViewModel.swift */; };
 		5832F0021D3D7D5100B1C6B0 /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5832EFFF1D3D7D5100B1C6B0 /* PersonDetailsViewController.swift */; };
 		5832F0031D3D7D5100B1C6B0 /* PersonDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5832F0001D3D7D5100B1C6B0 /* PersonDetails.storyboard */; };
+		584F0B761D416F5500B50179 /* AddContactViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584F0B751D416F5500B50179 /* AddContactViewModelTests.swift */; };
 		680950F21D241DB600EF3F63 /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680950F11D241DB600EF3F63 /* PeopleService.swift */; };
 		680950F61D24216E00EF3F63 /* PeopleServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680950F51D24216E00EF3F63 /* PeopleServiceTests.swift */; };
 		6809510A1D24280700EF3F63 /* PeopleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680951071D24280700EF3F63 /* PeopleListViewController.swift */; };
@@ -54,6 +55,7 @@
 		5832EFFE1D3D7D5100B1C6B0 /* PersonDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewModel.swift; sourceTree = "<group>"; };
 		5832EFFF1D3D7D5100B1C6B0 /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
 		5832F0001D3D7D5100B1C6B0 /* PersonDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PersonDetails.storyboard; sourceTree = "<group>"; };
+		584F0B751D416F5500B50179 /* AddContactViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactViewModelTests.swift; sourceTree = "<group>"; };
 		680950F11D241DB600EF3F63 /* PeopleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
 		680950F51D24216E00EF3F63 /* PeopleServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleServiceTests.swift; sourceTree = "<group>"; };
 		680951071D24280700EF3F63 /* PeopleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleListViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,14 @@
 			path = PersonDetails;
 			sourceTree = "<group>";
 		};
+		58927A131D4163DF006C5CF2 /* AddContact */ = {
+			isa = PBXGroup;
+			children = (
+				584F0B751D416F5500B50179 /* AddContactViewModelTests.swift */,
+			);
+			path = AddContact;
+			sourceTree = "<group>";
+		};
 		58E7520B1D24C30000AA7822 /* PersonDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +217,7 @@
 		AD72BAE01D1CA73B00C230B9 /* HelloRestSpecs */ = {
 			isa = PBXGroup;
 			children = (
+				58927A131D4163DF006C5CF2 /* AddContact */,
 				582BD4011D2574D400C0FD7A /* PersonDetails */,
 				6809510F1D242FE400EF3F63 /* Models */,
 				680950FF1D2426F300EF3F63 /* Services */,
@@ -527,6 +538,7 @@
 				AD550FF41D1D5D33001B640B /* PeopleListViewControllerTests.swift in Sources */,
 				680951151D243C7100EF3F63 /* PeopleListViewModelTests.swift in Sources */,
 				680951111D24300200EF3F63 /* PersonTests.swift in Sources */,
+				584F0B761D416F5500B50179 /* AddContactViewModelTests.swift in Sources */,
 				680950F61D24216E00EF3F63 /* PeopleServiceTests.swift in Sources */,
 				680951171D243E0700EF3F63 /* PeopleServiceMock.swift in Sources */,
 			);

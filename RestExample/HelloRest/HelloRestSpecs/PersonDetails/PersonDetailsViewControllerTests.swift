@@ -20,6 +20,6 @@ class PersonDetailsViewControllerTests : QuickSpec {
 
                 expect(vc.title).to(equal("Details"))
             }
-}
-}
+        }
+    }
 }

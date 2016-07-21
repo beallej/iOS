@@ -1,17 +1,12 @@
 import UIKit
+import ReactiveCocoa
 
 class AddContactViewController : UIViewController {
 
 
     @IBOutlet weak var NameField: AddContactTextField!
-
-
     @IBOutlet weak var phoneField: AddContactTextField!
-
-
     @IBOutlet weak var ageField: AddContactTextField!
-
-
     @IBOutlet weak var continueButton: UIButton! {
         didSet {
             continueButton?.layer.borderWidth = 1.0
@@ -21,19 +16,29 @@ class AddContactViewController : UIViewController {
     }
 
     var peopleService: PeopleServiceType = PeopleService()
+    let addedPersonSignal = MutableProperty<Bool>(false)
+    var viewModel: AddContactViewModel!
+
+    override func viewDidLoad() {
+        viewModel = AddContactViewModel(peopleService: peopleService)
+        addedPersonSignal <~ viewModel.didGetResponse.producer
+        addedPersonSignal.producer.startWithNext { _ in
+            if (self.viewModel.didGetResponse.value) {
+                self.navigationController?.popViewControllerAnimated(true)
+            }
+        }
+    }
+
 
     @IBAction func continueButtonPressed(sender: UIButton) {
         if let name = NameField.text,
             phone = phoneField.text,
             age = ageField.text {
-            let person = Person(id: 0, name: name, age: Int(age) , phone: phone)
-            peopleService.addNewPerson(person) {_ in 
-                print("yay!")
 
-            }
+            let person = Person(id: 0, name: name, age: Int(age) , phone: phone)
+            viewModel.addPerson(person)
         }
     }
-
 }
 
 class AddContactTextField : UITextField {

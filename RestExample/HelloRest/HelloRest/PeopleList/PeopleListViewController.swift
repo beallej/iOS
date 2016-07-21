@@ -22,6 +22,10 @@ class PeopleListViewController: UIViewController{
         }
     }
 
+    override func viewWillAppear(animated: Bool) {
+        viewModel.reloadData()
+    }
+
     func goToPersonDetailsView(withID id: Int) {
         let targetStoryboard = UIStoryboard(name: "PersonDetails", bundle: nil)
         let viewController = targetStoryboard.instantiateInitialViewController() as! PersonDetailsViewController

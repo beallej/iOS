@@ -13,6 +13,12 @@ struct PeopleListViewModel {
         }
     }
 
+    func reloadData() {
+        peopleService.getAllPeopleWithDetails { people in
+            self.people.value = people
+        }
+    }
+
     var numberOfPeople: Int {
         return people.value.count
     }

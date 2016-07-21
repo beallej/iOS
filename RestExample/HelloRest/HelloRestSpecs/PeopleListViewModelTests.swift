@@ -8,8 +8,11 @@ class PeopleListViewModelTests : QuickSpec {
     override func spec() {
         describe("People List View Model") {
             var viewModel: PeopleListViewModel!
+            var peopleServiceMock: PeopleServiceMock!
+            
             beforeEach {
-                viewModel = PeopleListViewModel(peopleService: PeopleServiceMock())
+                peopleServiceMock = PeopleServiceMock()
+                viewModel = PeopleListViewModel(peopleService: peopleServiceMock)
             }
             it("should initialize with a list of people") {
                 expect(viewModel.people.value.count).toEventually(equal(1))
@@ -22,6 +25,12 @@ class PeopleListViewModelTests : QuickSpec {
             it("should return the person at an index") {
                 let expectedPersonWithoutDetail = Person(id: 1, name: "someName")
                 expect(viewModel.getPersonAtIndex(0)).to(equal(expectedPersonWithoutDetail))
+            }
+
+            it("reloadData() should call get all people") {
+                viewModel.reloadData()
+
+                expect(peopleServiceMock.getAllPeopleWithDetailsCalled).to(beTrue())
             }
         }
     }
