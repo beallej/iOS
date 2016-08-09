@@ -14,6 +14,7 @@ class PersonDetailsViewControllerTests : QuickSpec {
             it("should setup title and adapter"){
                 let storyBoard = UIStoryboard(name:"PersonDetails", bundle: nil)
                 let vc = storyBoard.instantiateInitialViewController() as! PersonDetailsViewController
+                vc.personID = 1
                 vc.peopleService = PeopleServiceMock()
                 //calls viewDidLoad()
                 let _ = vc.view

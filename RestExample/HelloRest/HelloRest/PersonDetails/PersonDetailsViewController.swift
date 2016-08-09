@@ -15,6 +15,7 @@ class PersonDetailsViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Details"
+
         setUpViewModel()
     }
     func setUpViewModel() {
@@ -27,8 +28,7 @@ class PersonDetailsViewController : UIViewController {
     }
 
     func updateLabels() {
-        nameLabel.text = viewModel.name
-        phoneLabel.text = viewModel.phone
-        ageLabel.text = viewModel.age
+        let detailsView = view as! PersonDetailsView
+        detailsView.updateLabels(viewModel.name, phone: viewModel.phone, age: viewModel.age)
     }
 }

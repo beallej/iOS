@@ -6,17 +6,28 @@ platform :ios, '8.0'
 
 use_frameworks!
 
-pod 'SwiftyJSON'
-pod 'Alamofire'
-pod 'ReactiveCocoa', '~> 4.1'
-
-target 'HelloRest' do
-
-end
-
-target 'HelloRestSpecs' do
+def testing_pods
   pod 'Quick'
   pod 'Nimble'
   pod 'OHHTTPStubs'
   pod 'OHHTTPStubs/Swift'
+end 
+
+def networking_pods
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
+  pod 'ReactiveCocoa', '~> 4.1'
+end 
+
+def layout_pods
+  pod 'PureLayout'
+end
+
+target 'HelloRest' do
+  networking_pods
+  layout_pods
+end
+
+target 'HelloRestSpecs' do
+  testing_pods
 end
