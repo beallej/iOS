@@ -1,9 +1,6 @@
-# iOS Workshop Part III (Completed)
+# iOS Workshop Part III, Step 2 (Workshop Completed)
 ## Prerequisites
-* A basic understanding of Swift
-  * Ability to create a basic, single-view app
-* Project enviornment set up, see below 
-* At least 1 reading from the list below 
+* Workshop Parts I-II Complete 
 
 ## Installing CocoaPods
 
@@ -29,25 +26,13 @@
 * Start server, `npm start`
 
 ## Workshop Agenda
-1. Walkthrough, build familiarity with existing code and functionality (Group)
-2. Add the phone number of each contact as the cell description. Do this without refactoring the current service method  `getAllPeople()` but instead by building a new one for the `/listAll` endpoint. The code should look very similar to how the data for `/list` is fetched and displayed. (pairs)
-3. Walkthrough transitioning to a new view by tapping on a cell (Group)
-4. Build out service method that retreieves data from `/personByID` endpoint (Pairs)
-5. Use ReactiveCocoa to build out a ViewController and ViewModel using signals (Group)
-6. Display the data returned from `/personByID` on the UI using the signals implemented as a group (Pairs)
+1. Implement a UI programatically using PureLayout
+2. Add a new view, using storyboards that allows a person to be added to your contacts
+  * Goal is to have a high fidelity UI
+  * You will need to add the backend service that enables this functionality
 
 ## Readings 
-### MVVM
-* https://www.objc.io/issues/13-architecture/mvvm/
-* http://artsy.github.io/blog/2015/09/24/mvvm-in-swift/
+### PureLayout
+* https://github.com/PureLayout/PureLayout
 
-### Quick/Nimble Testing
-* https://github.com/Quick/Quick/blob/master/Documentation/en-us/TestingApps.md
-* https://github.com/Quick/Nimble
-
-### Reactive Cocoa
-* http://ifnotapps.com/2013/07/25/reactivecocoa-from-the-ground-floor-part1/
-
-
-
-
+# Next: iOS Workshop Part IV
