@@ -1,4 +1,4 @@
-# iOS Workshop Part II (Step 6 Complete)
+# iOS Workshop Part III (Completed)
 ## Prerequisites
 * A basic understanding of Swift
   * Ability to create a basic, single-view app
