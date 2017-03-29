@@ -19,6 +19,8 @@
 		680951151D243C7100EF3F63 /* PeopleListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680951141D243C7100EF3F63 /* PeopleListViewModelTests.swift */; };
 		680951171D243E0700EF3F63 /* PeopleServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680951161D243E0700EF3F63 /* PeopleServiceMock.swift */; };
 		68F3F63B1D257519007CD3A4 /* PeopleTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F3F63A1D257519007CD3A4 /* PeopleTransformerTests.swift */; };
+		9E31AF181E8C3616002D9082 /* PersonDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E31AF171E8C3616002D9082 /* PersonDetailView.storyboard */; };
+		9E31AF1A1E8C369A002D9082 /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E31AF191E8C369A002D9082 /* PersonDetailViewController.swift */; };
 		AD550FF41D1D5D33001B640B /* PeopleListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD550FF31D1D5D33001B640B /* PeopleListViewControllerTests.swift */; };
 		AD86366D1D1CA38000792EDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD86366C1D1CA38000792EDC /* AppDelegate.swift */; };
 		AD8636721D1CA38000792EDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8636701D1CA38000792EDC /* Main.storyboard */; };
@@ -51,6 +53,8 @@
 		680951141D243C7100EF3F63 /* PeopleListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleListViewModelTests.swift; sourceTree = "<group>"; };
 		680951161D243E0700EF3F63 /* PeopleServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleServiceMock.swift; sourceTree = "<group>"; };
 		68F3F63A1D257519007CD3A4 /* PeopleTransformerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTransformerTests.swift; sourceTree = "<group>"; };
+		9E31AF171E8C3616002D9082 /* PersonDetailView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PersonDetailView.storyboard; path = HelloRest/PersonDetail/PersonDetailView.storyboard; sourceTree = SOURCE_ROOT; };
+		9E31AF191E8C369A002D9082 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonDetailViewController.swift; path = HelloRest/PersonDetail/PersonDetailViewController.swift; sourceTree = SOURCE_ROOT; };
 		AAA49A9A49AFCAAE85CD5DFA /* Pods_HelloRest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloRest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD550FF31D1D5D33001B640B /* PeopleListViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleListViewControllerTests.swift; sourceTree = "<group>"; };
 		AD70B3D63BE2E643752101A6 /* Pods-HelloRestSpecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRestSpecs.release.xcconfig"; path = "../Pods/Target Support Files/Pods-HelloRestSpecs/Pods-HelloRestSpecs.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				680951071D24280700EF3F63 /* PeopleListViewController.swift */,
 				680951081D24280700EF3F63 /* PeopleListViewModel.swift */,
 				680951091D24280700EF3F63 /* PeopleListView.storyboard */,
+				9E31AF171E8C3616002D9082 /* PersonDetailView.storyboard */,
+				9E31AF191E8C369A002D9082 /* PersonDetailViewController.swift */,
 			);
 			path = PeopleList;
 			sourceTree = "<group>";
@@ -263,15 +269,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Venkat;
 				TargetAttributes = {
 					AD72BADE1D1CA73B00C230B9 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = AD8636681D1CA38000792EDC;
 					};
 					AD8636681D1CA38000792EDC = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -307,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6809510C1D24280700EF3F63 /* PeopleListView.storyboard in Resources */,
+				9E31AF181E8C3616002D9082 /* PersonDetailView.storyboard in Resources */,
 				AD8636771D1CA38000792EDC /* LaunchScreen.storyboard in Resources */,
 				AD8636741D1CA38000792EDC /* Assets.xcassets in Resources */,
 				AD8636721D1CA38000792EDC /* Main.storyboard in Resources */,
@@ -358,7 +367,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		83B513C97F0056D8F55E50AB /* [CP] Embed Pods Frameworks */ = {
@@ -463,7 +472,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F144161428D14E3EA3907233 /* [CP] Copy Pods Resources */ = {
@@ -521,6 +530,7 @@
 				6809510A1D24280700EF3F63 /* PeopleListViewController.swift in Sources */,
 				6809510B1D24280700EF3F63 /* PeopleListViewModel.swift in Sources */,
 				680950F21D241DB600EF3F63 /* PeopleService.swift in Sources */,
+				9E31AF1A1E8C369A002D9082 /* PersonDetailViewController.swift in Sources */,
 				AD86366D1D1CA38000792EDC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -564,6 +574,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vp.HelloRestSpecs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloRest.app/HelloRest";
 			};
 			name = Debug;
@@ -577,6 +588,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vp.HelloRestSpecs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloRest.app/HelloRest";
 			};
 			name = Release;
@@ -595,8 +607,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -640,8 +654,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -660,6 +676,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -674,6 +691,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vp.HelloRest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -687,6 +705,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vp.HelloRest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

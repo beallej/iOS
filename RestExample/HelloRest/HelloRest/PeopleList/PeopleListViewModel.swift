@@ -1,8 +1,9 @@
 import UIKit
 import SwiftyJSON
 import ReactiveCocoa
+import ReactiveSwift
 
-struct PeopleListViewModel {
+class PeopleListViewModel {
     let people = MutableProperty<[Person]>([])
     let peopleService: PeopleServiceType
 
@@ -12,12 +13,13 @@ struct PeopleListViewModel {
             self.people.value = people
         }
     }
+    
 
     var numberOfPeople: Int {
         return people.value.count
     }
 
-    func getPersonAtIndex(index: Int) -> Person {
+    func getPersonAtIndex(_ index: Int) -> Person {
         return people.value[index]
     }
 }

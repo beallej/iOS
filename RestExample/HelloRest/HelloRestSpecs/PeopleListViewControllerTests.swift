@@ -8,18 +8,29 @@ import Alamofire
 import UIKit
 
 class PeopleListViewControllerTests : QuickSpec {
+    var vc : PeopleListViewController!
+    
     override func spec() {
+        
+        beforeEach {
+            let storyBoard = UIStoryboard(name:"PeopleListView", bundle: nil)
+            self.vc = storyBoard.instantiateInitialViewController() as! PeopleListViewController
+            
+        }
                 
         describe(".viewDidLoad") {
-            it("should setup title and adapter"){
-                let storyBoard = UIStoryboard(name:"PeopleListView", bundle: nil)
-                let vc = storyBoard.instantiateInitialViewController() as! PeopleListViewController
+            it("should setup title and adapter and delegate"){
+                
 
                 //calls viewDidLoad()
-                let _ = vc.view
+                let _ = self.vc.view
 
-                expect(vc.title).to(equal("Contacts"))
+                expect(self.vc.title).to(equal("Contacts"))
+                expect(self.vc.tableView.delegate).toNot(beNil())
+
             }
         }
+
+        
     }
 }
